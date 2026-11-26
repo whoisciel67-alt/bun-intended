@@ -184,7 +184,7 @@
     <!--inventory window-->
     <div id="inventoryModal" class="modal hidden" role="dialog" aria-modal="true">
         <div class="modal-card">
-            
+
             <button class="modal-close" data-close="inventoryModal">×</button>
 
             <p class="modal-kicker">WHAT'S IN THE KITCHEN</p>
@@ -201,13 +201,28 @@
 
     <!--end of day window-->
     <div id="dayModal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <p class="modal-kicker">THE SHOP IS CLOSED</p>
+            <h2>That's a wrap!</h2>
 
+            <div id="daySummary" class="modal-body"></div>
+            <div class="modal-actions">
+                <button id="nextDayButton" class="button primary">START NEXT DAY</button>
+            </div>
+        </div>
 
     </div>
 
     <!--pause window-->
     <div id="pauseModal" class="modal hiddden" role="dialog" aria-modal="true">
 
+        <div class="modal-card">
+            <button class="modal-close" data-close="pauseModal">×</button>
+
+            <p class="modal-kicker">TAKE YOUR TIME</p>
+            <h2>Game paused</h2>
+            <p>Your bakery can wait a moment.</p>
+        </div>
 
     </div>
 
