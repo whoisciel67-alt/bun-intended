@@ -80,6 +80,60 @@
 
                 <button id="pauseButton" class="small-button" title="Pause">Ⅱ</button>
             </div>
+
+            <div class="game-wrap">
+                <canvas 
+                    id="gameCanvas" 
+                    width="960" 
+                    height="540" 
+                    aria-label="Side-view bakery game">
+                </canvas>
+
+                <div class="canvas-hint" id="canvasHint">
+                    WASD / ← → to move · [ E ] to interact
+                </div>
+                <div id="toast" class="toast hidden"></div>
+            </div>
+
+            <div class="bottom panels">
+                <section class="panel order-panel">
+                    <div class="panel-heading">
+                        <span>✦ TODAY'S ORDERS</span>
+                        <span id="customerCount">0 waiting</span>
+                    </div>
+
+                    <div id="ordersList" class="orders-list">
+                        <p class="empty-message">No customers yet. Enjoy the quiet!</p>
+                    </div>
+                </section>
+
+                <section class="panel action-panel">
+                    <div class="panel-heading">
+                        <span>✦ YOUR BAG</span>
+                        <button id="inventoryButton" class="link-button">DETAILS</button>
+                    </div>
+
+                    <div class="stock-row">
+                        <span>🥐 Croissants</span>
+                        <strong id="croissantStock">0</strong>
+                    </div>
+
+                    <div class="stock-row">
+                        <span>🍪 Cookies</span>
+                        <strong id="cookieStock">0</strong>
+                    </div>
+
+                    <div class="stock-row">
+                        <span>☕ Coffee</span>
+                        <strong id="coffeeStock">0</strong>
+                    </div>
+
+                    <p class="help-line">Walk up to a station and press <b>[ E ]</b></p>
+
+                </section>
+            </div>
+
+
         </section>
 
     </main>
