@@ -159,7 +159,7 @@ const game = {
 
     player: {
         x: 125,
-        y: 0,
+        y: 330,
         width: 64,
         height: 96,
         speed: 3,
@@ -914,6 +914,7 @@ function addCustomer() {
         order: requestedProduct,
 
         x: -80,
+        y: 330,
         targetX: 650 + Math.random() * 50,
 
         state: "entering",
@@ -1105,7 +1106,8 @@ function interact() {
 }
 
 
-//dialogue window content
+
+// dialogue window content
 function setInteraction(title, subtitle, content, buttons) {
 
     document.getElementById("modalTitle").textContent = title;
@@ -1115,6 +1117,14 @@ function setInteraction(title, subtitle, content, buttons) {
     document.getElementById("modalContent").innerHTML = content;
 
     document.getElementById("modalButtons").innerHTML = buttons;
+
+    // Make dynamically created buttons work
+    document.querySelectorAll("#modalButtons [data-close]").forEach(button => {
+        button.addEventListener("click", () => {
+            playSound("click");
+            closeModal(button.dataset.close);
+        });
+    });
 
     openModal("interactionModal");
 
