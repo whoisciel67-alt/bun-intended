@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <main class="page">
+    <main class="game-container">
         
         <header class="topbar">
             <a class="brand" href="#" aria-label="Bun Intended home">
@@ -37,82 +37,82 @@
 
         <!--main game screen-->
         <section id="gameScreen" class="screen game-screen hidden">
-            <div class="hud">
-                <div class="hud-item">
-                    <span class="hud-label">DAY</span>
-                    <strong id="dayLabel">01</strong>
+            <!--top hud-->
+           <header class="game-header">
+                <div class="header-info">
+                    <span>DAY <strong id="dayDisplay">01</strong></span>
+                    <span id="timeDisplay">08:00 AM</span>
                 </div>
 
-                <div class="hud-item">
-                    <span class="hud-label">TIME</span>
-                    <strong id="timeLabel">8:00 AM</strong>
+                <div class="header-info">
+                    <span>WALLET</span>
+                    <strong id="moneyDisplay">100 coins</strong>
                 </div>
 
-                <div class="hud-item money">
-                    <span class="hud-label">WALLET</span>
-                    <strong id="moneyLabel">100 coins</strong>
-                </div>
-
-                <div class="hud-item">
-                    <span class="hud-label">SERVED</span>
-                    <strong id="servedLabel">0</strong>
-                </div>
-
-                <button id="pauseButton" class="small-button" title="Pause">Ⅱ</button>
-            </div>
-
-            <div class="game-wrap">
-                <canvas 
-                    id="gameCanvas" 
-                    width="960" 
-                    height="540" 
-                    aria-label="Side-view bakery game">
-                </canvas>
-
-                <div class="canvas-hint" id="canvasHint">
-                    WASD / ← → to move · [ E ] to interact
-                </div>
+                <button id="pauseButton" class="icon-button">
+                    II
+                </button>
+            </header>
+            <!--game world-->
+            <div class="game-world">
+                <canvas id="gameCanvas" width="960" height="540"></canvas>
+                <div id="interactionPrompt" class="interaction-prompt hidden">Press [ E ] to interact</div> 
                 <div id="toast" class="toast hidden"></div>
             </div>
 
-            <div class="bottom panels">
-                <section class="panel order-panel">
-                    <div class="panel-heading">
-                        <span>✦ TODAY'S ORDERS</span>
-                        <span id="customerCount">0 waiting</span>
+            <!--bottom interface-->
+            <section class="game-interface">
+
+                <!--orders-->
+                <div class="interface-panel orders-panel">
+
+                    <div class="panel-title">
+                        <h2>Customer Orders</h2>
+                        <span id="waitingCount">0 waiting</span>
                     </div>
 
-                    <div id="ordersList" class="orders-list">
-                        <p class="empty-message">No customers yet. Enjoy the quiet!</p>
-                    </div>
-                </section>
-
-                <section class="panel action-panel">
-                    <div class="panel-heading">
-                        <span>✦ YOUR BAG</span>
-                        <button id="inventoryButton" class="link-button">DETAILS</button>
+                    <div id="ordersContainer" class="orders-container">
+                        <p class="empty-text">
+                            No customers yet.
+                        </p>
                     </div>
 
-                    <div class="stock-row">
-                        <span>🥐 Croissants</span>
-                        <strong id="croissantStock">0</strong>
+                </div>
+
+
+                <!--quick inventory-->
+                <div class="interface-panel inventory-panel">
+
+                    <div class="panel-title">
+                        <h2>Bakery Stock</h2>
+
+                        <button id="inventoryButton" class="small-link">
+                            View All
+                        </button>
                     </div>
 
-                    <div class="stock-row">
-                        <span>🍪 Cookies</span>
-                        <strong id="cookieStock">0</strong>
+                    <div class="quick-stock">
+
+                        <div class="quick-item">
+                            <img src="assets/products/croissant.png" alt="">
+                            <span id="croissantStock">0</span>
+                        </div>
+
+                        <div class="quick-item">
+                            <img src="assets/products/chocolate-cookie.png" alt="">
+                            <span id="cookieStock">0</span>
+                        </div>
+
+                        <div class="quick-item">
+                            <img src="assets/products/coffee.png" alt="">
+                            <span id="coffeeStock">0</span>
+                        </div>
+
                     </div>
 
-                    <div class="stock-row">
-                        <span>☕ Coffee</span>
-                        <strong id="coffeeStock">0</strong>
-                    </div>
+                </div>
 
-                    <p class="help-line">Walk up to a station and press <b>[ E ]</b></p>
-
-                </section>
-            </div>
-
+            </section>
 
         </section>
 
