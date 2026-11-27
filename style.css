@@ -37,3 +37,56 @@ body {
 
   font-family: 'Nunito', sans-serif;
 }
+
+.page {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 22px 0 42px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.brand {
+  color: var(--dark);
+  text-decoration: none;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: var(--terracotta);
+}
+
+.top-note,
+.eyebrow,
+.hud-label,
+.panel-heading,
+.modal-kicker {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  letter-spacing: .4px;
+}
+
+.top-note {
+  color: var(--muted);
+}
+
+.screen {
+  background: rgba(255,250,241,.88);
+  border: 2px solid #e8d8c4;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*title screen*/
