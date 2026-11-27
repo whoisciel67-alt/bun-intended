@@ -1,39 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --cream: #fbf3e5;
-  --paper: #fffaf1;
-  --peach: #e8b99b;
-  --terracotta: #b87863;
-  --sage: #879b78;
-  --dark: #59483f;
-  --muted: #927f70;
-  --line: #eadbc8;
-  --shadow: 0 12px 35px rgba(83, 59, 43, .12);
+    --cream: #fff5e8;
+    --brown: #60483b;
+    --dark-brown: #382920;
+    --pink: #d99b91;
+    --sage: #91a184;
+    --border: #e5cbb0;
 }
 
 * {
     box-sizing: border-box;
 }
 
-
 body {
-  margin: 0;
-  min-height: 100vh;
-  color: var(--dark);
-
-  background:
-    radial-gradient(
-      circle at 15% 10%,
-      rgba(232,185,155,.24),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 90% 80%,
-      rgba(135,155,120,.18),
-      transparent 25%
-    ),
-    var(--cream);
-
-  font-family: 'Nunito', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: #ead9c4;
+    color: var(--brown);
+    font-family: 'Nunito', sans-serif;
 }
+
+button {
+  font:inherit;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.game-container {
+  width: min(1100px, 96%);
+  margin: 25px auto;
+  background: var(--cream);
+  border: 5px solid #a98468;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(65, 43, 30, .2);
+}
+
