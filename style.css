@@ -77,7 +77,7 @@ button {
 }
 
 .menu-button {
-  padding: 14px 20px;
+  padding: 10px 20px;
   border: 3px solid #785440;
   border-radius: 5px;
   background: #d99b91;
@@ -90,4 +90,10 @@ button {
 
 .menu-button:hover {
   transform: translateY(-2px)
+}
+
+.secondary-button {
+  background: #91a184;
+  border-color: #617257;
+  box-shadow: 0 4px 0 #617257;
 }
