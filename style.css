@@ -90,3 +90,100 @@ body {
 }
 
 /*title screen*/
+
+.title-screen {
+
+}
+
+.title-art {
+
+}
+
+.sun {
+
+}
+
+.title-window {
+
+}
+
+.window-cross {
+
+}
+
+.window-cross::after {
+
+}
+
+.window-glow {
+
+}
+
+.title-counter {
+
+}
+
+
+.bread {
+
+}
+
+.bread-one {
+
+}
+
+.bread-two {
+
+}
+
+.plant {
+
+}
+
+.eyebrow {
+
+}
+
+h1 {
+
+
+}
+
+h1 span {
+
+}
+
+.intro {
+
+}
+
+.menu-buttons {
+
+}
+
+.button {
+
+}
+
+.button:hover {
+
+}
+
+.button.primary {
+
+}
+
+.button.secondary {
+
+}
+
+.text-button,
+.link-button {
+
+}
+
+.tiny-note {
+
+}
+
+/*game hud*/
