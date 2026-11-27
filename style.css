@@ -92,98 +92,207 @@ body {
 /*title screen*/
 
 .title-screen {
+  min-height: 690px;
+  padding: 35px 20px 28px;
+  text-align: center;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title-art {
+  position: relative;
+  width: min(550px, 90%);
+  height: 210px;
+  margin: 0 auto 18px;
+
+  border: 8px solid #8b6655;
+  border-botton-width: 18px;
+  border-radius: 12px 12px 4px 4px;
+
+  background: linear-gradient(
+    #f7d9b5 0 62%,
+    #d7a17e 62%
+  );
 
 }
 
 .sun {
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #f6bd78;
+  top: 27px;
+  right: 75px;
 
+  box-shadow: 0 0 0 12px rgba(255, 239, 196, .3);
 }
 
 .title-window {
+  position: absolute;
+  top: 18px;
+  left: 35px;
+  width: 230px;
+  height: 140px;
+
+  background: #a9c6b5;
+  border: 9px solid #fff0d7;
+  box-shadow: 0 0 0 5px #9a715b;
 
 }
 
 .window-cross {
-
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 8px;
+  background: #fff0d7;
+  transform: translateX(-50%);
 }
 
 .window-cross::after {
-
+  content: "";
+  position: absolute;
+  top: 48%;
+  left: -100px;
+  width: 200px;
+  height: 8px;
+  background: #fff0d7;
 }
 
 .window-glow {
+  position: absolute;
+  inset: 0;
 
+  background: linear-gradient(
+    135deg,
+    transparent 48%,
+    rgba(255,255,255,.35) 49%,
+    transparent 70%
+  );
 }
 
 .title-counter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 42px;
 
+  background: #9d6c52;
+  border-top: 8px solid #d6a17d;
 }
 
 
 .bread {
+  position: absolute;
+  bottom: 25px;
+  width: 55px;
+  height: 24px;
 
+  border-radius: 22px 22px 8px 8px;
+  background: #d99a54;
+  border: 4px solid #a96d3e;
 }
 
 .bread-one {
-
+  left: 310px;
+  transform: rotate(-7deg);
 }
 
 .bread-two {
-
+  left: 380px;
+  bottom: 22px;
+  transform: rotate(9deg);
+  background: #edc17e;
 }
 
 .plant {
-
+  position: absolute;
+  right: 32px;
+  bottom: 22px;
+  color: #71906b;
+  font-size: 34px;
 }
 
 .eyebrow {
-
+  color: var(--sage);
+  margin: 12px 0 16px;
 }
 
 h1 {
+  margin: 0;
+  color: var(--terracotta);
 
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(28px, 6vw, 54px);
+  line-height: 1.45;
 
+  text-shadow: 4px 4px 0 #f1d7bd;
 }
 
 h1 span {
-
+  color: var(--dark);
+  font-size: .65em;
 }
 
 .intro {
-
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 16px 0 22px;
+  font-weight: 700;
 }
 
 .menu-buttons {
-
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(270px, 90%);
 }
 
 .button {
+  border: 0;
+  border-radius: 9px;
+  padding: 14px 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
 
+  transition: transform .15s, filter .15s;
 }
 
 .button:hover {
-
+  transform: translateY(-2px);
+  filter: brightness(1.04);
 }
 
 .button.primary {
-
+  color: #fffaf1;
+  background: var(--terracotta);
+  box-shadow: 0 4px 0 #925c4c;
 }
 
 .button.secondary {
-
+  color: var(--dark);
+  background: #e6d7bd;
+  box-shadow: 0 4px 0 #c7b496;
 }
 
 .text-button,
 .link-button {
-
+  color: var(--sage);
+  background: transparent;
+  border: 0;
+  font-weight: 800;
+  padding: 9px;
 }
 
 .tiny-note {
-
+  color: #b29e89;
+  font-size: 12px;
+  margin-top: 24px;
 }
 
 /*game hud*/
