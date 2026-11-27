@@ -82,7 +82,6 @@
 
                 <!--quick inventory-->
                 <div class="interface-panel inventory-panel">
-
                     <div class="panel-title">
                         <h2>Bakery Stock</h2>
 
@@ -90,9 +89,7 @@
                             View All
                         </button>
                     </div>
-
                     <div class="quick-stock">
-
                         <div class="quick-item">
                             <img src="assets/products/croissant.png" alt="">
                             <span id="croissantStock">0</span>
@@ -107,111 +104,95 @@
                             <img src="assets/products/coffee.png" alt="">
                             <span id="coffeeStock">0</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </section>
-
         </section>
-
     </main>
     
-    <!--general dialogue window-->
-    <div id="dialogueModal" class="modal hidden" role="dialog" aria-modal="true">
-        
+    <!--interaction modal-->
+    <div id="interactionModal" class="modal hidden">
         <div class="modal-card">
-            <button class="modal-close" data-close="dialogueModal">×</button>
-            <p class="modal-kicker" id="modalKicker">A LITTLE NOTE</p>
-            <h2 id="modalTitle">Hello there!</h2>
-            <div id="modalBody" class="modal-body"></div>
-            <div id="modalActions" class="modal-actions"></div>
+            <button class="close-button" data-close="interactionModal">×</button>
+            <p id="modalSubtitle" class="modal-subtitle">BAKERY</p>
+            <h2 id="modalTitle">Welcome!</h2>
+            <div id="modalContent" class="modal-content"></div>
+            <div id="modalButtons" class="modal-buttons"></div>
+        </div>
+    </div>
+    
+    <!--inventory modal-->
+    <div id="inventoryModal" class="modal hidden">
+        <div class="modal-card inventory-card">
+            <button class="close-button" data-close="inventoryModal">×</button>
+            <p class="modal-subtitle">YOUR LITTLE BAKERY</p>
+            <h2>Inventory</h2>
+            <div id="inventoryContent" class="full-inventory"></div>
         </div>
     </div>
 
-    <!--how to play window-->
-    <div id="howModal" class="modal hidden" role="dialog" aria-modal="true">
-
+    <!--pause menu-->
+    <div id="pauseModal" class="modal hidden">
         <div class="modal-card">
-            <button class="modal-close" data-close="howModal">×</button>
-            <p class="modal-kicker">A QUICK GUIDE</p>
-            <h2>How to play</h2>
-            <p>
-                Move around your bakery and visit the stations.
-                Bake a few treats before customers arrive, then serve
-                the orders shown below the game.
-            </p>
+            <p class="modal-subtitle">TAKE A LITTLE BREAK</p>
+            <h2>Game Paused</h2>
 
-            <ul class="guide-list">
-                <li><b>[ A ] / [ D ]</b> or <b>[ ← ] / [ → ]</b> — walk</li>
-                <li><b>[ E ]</b> — use the nearby station</li>
-                <li><b>Esc</b> — close a window</li>
-                <li><b>Space</b> — serve the next waiting order</li>
-            </ul>
+            <div class="modal-buttons vertical-buttons">
 
-            <p class="soft-note">
-                This is an early prototype. The bakery is small on purpose.
-                Our lovely dev (Ciel) will add more recipes, characters and story moments as we go.
-            </p>
+                <button id="resumeButton" class="action-button">
+                    Resume
+                </button>
 
-            <div class="modal-actions">
-                <button class="button primary" data-close="howModal">GOT IT</button>
+                <button id="saveButton" class="action-button secondary-action">
+                    Save Game
+                </button>
+
+                <button id="mainMenuButton" class="text-button">
+                    Main Menu
+                </button>
+
             </div>
         </div>
     </div>
+    
+    <!--how to play-->
+    <div id="helpModal" class="modal hidden">
 
-    <!--inventory window-->
-    <div id="inventoryModal" class="modal hidden" role="dialog" aria-modal="true">
         <div class="modal-card">
+            <button class="close-button" data-close="helpModal">×</button>
+            <p class="modal-subtitle">A LITTLE GUIDE</p>
 
-            <button class="modal-close" data-close="inventoryModal">×</button>
+            <h2>How to Play</h2>
 
-            <p class="modal-kicker">WHAT'S IN THE KITCHEN</p>
+            <div class="help-content">
+                <p><b>[ A ] / [ D ] or Arrow Keys</b> — Move around.</p>
+                <p><b>[ E ]</b> — Interact with a nearby object.</p>
+                <p><b>Space</b> — Serve the next waiting customer.</p>
+                <p><b>Esc</b> — Close a window.</p>
 
-            <h1>pantry & display</h1>
-
-            <div id="inventoryDetails" class="inventory-details"></div>
-
-            <div class="modal-actions">
-                <button class="button primary" data-close="inventoryModal">CLOSE</button>
+                <p class="help-note">
+                    Bake goods, prepare drinks, serve customers,
+                    and grow your little bakery!
+                </p>
             </div>
-        </div>
-    </div>
 
-    <!--end of day window-->
-    <div id="dayModal" class="modal hidden" role="dialog" aria-modal="true">
-        <div class="modal-card">
-            <p class="modal-kicker">THE SHOP IS CLOSED</p>
-            <h2>That's a wrap!</h2>
-
-            <div id="daySummary" class="modal-body"></div>
-            <div class="modal-actions">
-                <button id="nextDayButton" class="button primary">START NEXT DAY</button>
-            </div>
         </div>
 
     </div>
-
-    <!--pause window-->
-    <div id="pauseModal" class="modal hiddden" role="dialog" aria-modal="true">
-
+    
+    <!--end of day-->
+    <div id="dayModal" class="modal hidden">
         <div class="modal-card">
-            <button class="modal-close" data-close="pauseModal">×</button>
-
-            <p class="modal-kicker">TAKE YOUR TIME</p>
-            <h2>Game paused</h2>
-            <p>Your bakery can wait a moment.</p>
-
-            <div class="modal-actions">
-                <button id="resumeButton" class="button primary">BACK TO THE BAKERY</button>
-                <button id="saveButton" class="button secondary">SAVE GAME</button>
-                <button id="menuButton" class="text-button">BACK TO TITLE</button>
+            <p class="modal-subtitle">THE SHOP IS CLOSED</p>
+            <h2>Another day, done!</h2>
+            <div id="daySummary"></div>
+            <div class="modal-buttons">
+                <button id="nextDayButton" class="action-button">
+                    Start Next Day
+                </button>
             </div>
         </div>
-
     </div>
-
     
     <!--script.js-->
     <script src="script.js"></script>
