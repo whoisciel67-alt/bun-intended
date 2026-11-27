@@ -97,3 +97,12 @@ button {
   border-color: #617257;
   box-shadow: 0 4px 0 #617257;
 }
+
+.title-caption {
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 2px 4px #382920;
+    margin-top: 30px;
+}
+
+/*game header*/
